@@ -71,53 +71,58 @@ public class ReadQuery {
         
         try {
             while(this.results.next()) {
-                GermanyFootballTeam gft = new GermanyFootballTeam();
-                gft.setPlayerID(this.results.getInt("playerID"));
-                gft.setPlayerJerseyNumber(this.results.getInt("playerJerseyNumber"));
-                gft.setPlayerName(this.results.getString("playerName"));
-                gft.setPlayerAge(this.results.getInt("playerAge"));
-                gft.setPlayerPOB(this.results.getString("playerPOB"));
-                gft.setPlayerPosition(this.results.getString("playerPosition"));
-                gft.setPlayerCaps(this.results.getInt("playerCaps"));
-                gft.setPlayerGoals(this.results.getInt("playerGoals"));
-                gft.setPlayerDomesticClub(this.results.getString("PlayerDomesticClub"));
+                GermanyFootballTeam germanyfootballteam = new GermanyFootballTeam();
+                germanyfootballteam.setPlayerID(this.results.getInt("playerID"));
+                germanyfootballteam.setPlayerJerseyNumber(this.results.getInt("playerJerseyNumber"));
+                germanyfootballteam.setPlayerName(this.results.getString("playerName"));
+                germanyfootballteam.setPlayerAge(this.results.getInt("playerAge"));
+                germanyfootballteam.setPlayerPOB(this.results.getString("playerPOB"));
+                germanyfootballteam.setPlayerPosition(this.results.getString("playerPosition"));
+                germanyfootballteam.setPlayerCaps(this.results.getInt("playerCaps"));
+                germanyfootballteam.setPlayerGoals(this.results.getInt("playerGoals"));
+                germanyfootballteam.setPlayerDomesticClub(this.results.getString("PlayerDomesticClub"));
                 
                 table += "<tr>";
                 table += "<td>";
-                table += gft.getPlayerID();
+                table += germanyfootballteam.getPlayerID();
                 table += "</td>";
                 
                 table += "<td>";
-                table += gft.getPlayerJerseyNumber();
+                table += germanyfootballteam.getPlayerJerseyNumber();
                 table += "</td>";
                 
                 table += "<td>";
-                table += gft.getPlayerName();
+                table += germanyfootballteam.getPlayerName();
                 table += "</td>";
                 
                 table += "<td>";
-                table += gft.getPlayerAge();
+                table += germanyfootballteam.getPlayerAge();
                 table += "</td>";
                 
                 table += "<td>";
-                table += gft.getPlayerPOB();
+                table += germanyfootballteam.getPlayerPOB();
                 table += "</td>";
                 
                 table += "<td>";
-                table += gft.getPlayerPosition();
+                table += germanyfootballteam.getPlayerPosition();
                 table += "</td>";
                 
                 table += "<td>";
-                table += gft.getPlayerCaps();
+                table += germanyfootballteam.getPlayerCaps();
                 table += "</td>";
                 
                 table += "<td>";
-                table += gft.getPlayerGoals();
+                table += germanyfootballteam.getPlayerGoals();
                 table += "</td>";
                 
                 table += "<td>";
-                table += gft.getPlayerDomesticClub();
+                table += germanyfootballteam.getPlayerDomesticClub();
                 table += "</td>";
+                
+                table += "<td>";
+                table += "<a href=delete?playerID=" + germanyfootballteam.getPlayerID() + ">Delete</a>";
+                table += "</td>";
+                
                 table += "</tr>";
             }
         } catch (SQLException ex) {

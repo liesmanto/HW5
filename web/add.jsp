@@ -17,28 +17,28 @@
         <form name="addForm" action="addPlayer" method="get">
             
             <label>Jersey Number:</label>
-            <input type="tex" name="number" value=""/>
+            <input type="tex" name="playerJerseyNumber" value=""/>
             <br>
             <label>Name:</label>
-            <input type="tex" name="name" value=""/>
+            <input type="tex" name="playerName" value=""/>
             <br>
             <label>Age:</label>
-            <input type="tex" name="age" value=""/>
+            <input type="tex" name="playerAge" value=""/>
             <br>
             <label>Player Place of Birth:</label>
-            <input type="tex" name="pob" value=""/>
+            <input type="tex" name="playerPOB" value=""/>
             <br>
             <label>Player Position:</label>
-            <input type="tex" name="position" value=""/>
+            <input type="tex" name="playerPosition" value=""/>
             <br>
             <label># of Caps:</label>
-            <input type="tex" name="caps" value=""/>
+            <input type="tex" name="playerCaps" value=""/>
             <br>
             <label># of Goals</label>
-            <input type="tex" name="goals" value=""/>
+            <input type="tex" name="playerGoals" value=""/>
             <br>
             <label>Domestic Club:</label>
-            <input type="tex" name="club" value=""/>
+            <input type="tex" name="playerDomesticClub" value=""/>
             <br>
             <input type="submit" name="submit" value="Submit"/>
         </form>

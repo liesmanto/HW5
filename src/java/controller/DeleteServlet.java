@@ -5,23 +5,20 @@
  */
 package controller;
 
-import dbHelpers.AddQuery;
 import java.io.IOException;
 import java.io.PrintWriter;
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import model.GermanyFootballTeam;
 
 /**
  *
  * @author nliesmanto
  */
-@WebServlet(name = "AddServlet", urlPatterns = {"/addPlayer"})
-public class AddServlet extends HttpServlet {
+@WebServlet(name = "DeleteServlet", urlPatterns = {"/delete"})
+public class DeleteServlet extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -40,10 +37,10 @@ public class AddServlet extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet AddServlet</title>");            
+            out.println("<title>Servlet DeleteServlet</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet AddServlet at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Servlet DeleteServlet at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }
@@ -61,7 +58,7 @@ public class AddServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        doPost (request, response);
+        processRequest(request, response);
     }
 
     /**
@@ -75,39 +72,7 @@ public class AddServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-            
-            //get the data
-            int playerJerseyNumber = Integer.parseInt(request.getParameter("playerJerseyNumber"));
-            String playerName = request.getParameter("playerName");
-            int playerAge = Integer.parseInt(request.getParameter("playerAge"));
-            String playerPOB = request.getParameter("playerPOB");
-            String playerPosition = request.getParameter("playerPosition");
-            int playerCaps = Integer.parseInt(request.getParameter("playerCaps"));
-            int playerGoals = Integer.parseInt(request.getParameter("playerGoals"));
-            String playerDomesticClub = request.getParameter("playerDomesticClub");
-            
-            //set up player object
-            GermanyFootballTeam germanyfootballteam = new GermanyFootballTeam();
-            germanyfootballteam.setPlayerJerseyNumber(playerJerseyNumber);
-            germanyfootballteam.setPlayerName(playerName);
-            germanyfootballteam.setPlayerAge(playerAge);
-            germanyfootballteam.setPlayerPOB(playerPOB);
-            germanyfootballteam.setPlayerPosition(playerPosition);
-            germanyfootballteam.setPlayerCaps(playerCaps);
-            germanyfootballteam.setPlayerGoals(playerGoals);
-            germanyfootballteam.setPlayerDomesticClub(playerDomesticClub);
-            
-            //set up addQuery object
-            AddQuery aq = new AddQuery();
-            
-            //pass player to addQuery to add to the db
-            aq.doAdd(germanyfootballteam);
-            
-            //pass execution control to the ReadServlet
-            String url = "/read";
-            
-            RequestDispatcher dispatcher = request.getRequestDispatcher(url);
-            dispatcher.forward(request, response);
+        processRequest(request, response);
     }
 
     /**
