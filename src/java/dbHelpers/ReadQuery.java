@@ -67,56 +67,56 @@ public class ReadQuery {
 
     public String getHTMLTable() {
         String table = "";
-        table += "<table border=1 align=center>";
+        table += "<table>";
         
         try {
             while(this.results.next()) {
-                GermanyFootballTeam germanyfootballteam = new GermanyFootballTeam();
-                germanyfootballteam.setPlayerID(this.results.getInt("playerID"));
-                germanyfootballteam.setPlayerJerseyNumber(this.results.getInt("playerJerseyNumber"));
-                germanyfootballteam.setPlayerName(this.results.getString("playerName"));
-                germanyfootballteam.setPlayerAge(this.results.getInt("playerAge"));
-                germanyfootballteam.setPlayerPOB(this.results.getString("playerPOB"));
-                germanyfootballteam.setPlayerPosition(this.results.getString("playerPosition"));
-                germanyfootballteam.setPlayerCaps(this.results.getInt("playerCaps"));
-                germanyfootballteam.setPlayerGoals(this.results.getInt("playerGoals"));
-                germanyfootballteam.setPlayerDomesticClub(this.results.getString("PlayerDomesticClub"));
+                GermanyFootballTeam gft = new GermanyFootballTeam();
+                gft.setPlayerID(this.results.getInt("playerID"));
+                gft.setPlayerJerseyNumber(this.results.getInt("playerJerseyNumber"));
+                gft.setPlayerName(this.results.getString("playerName"));
+                gft.setPlayerAge(this.results.getInt("playerAge"));
+                gft.setPlayerPOB(this.results.getString("playerPOB"));
+                gft.setPlayerPosition(this.results.getString("playerPosition"));
+                gft.setPlayerCaps(this.results.getInt("playerCaps"));
+                gft.setPlayerGoals(this.results.getInt("playerGoals"));
+                gft.setPlayerDomesticClub(this.results.getString("PlayerDomesticClub"));
                 
                 table += "<tr>";
                 table += "<td>";
-                table += germanyfootballteam.getPlayerID();
+                table += gft.getPlayerID();
                 table += "</td>";
                 
                 table += "<td>";
-                table += germanyfootballteam.getPlayerJerseyNumber();
+                table += gft.getPlayerJerseyNumber();
                 table += "</td>";
                 
                 table += "<td>";
-                table += germanyfootballteam.getPlayerName();
+                table += gft.getPlayerName();
                 table += "</td>";
                 
                 table += "<td>";
-                table += germanyfootballteam.getPlayerAge();
+                table += gft.getPlayerAge();
                 table += "</td>";
                 
                 table += "<td>";
-                table += germanyfootballteam.getPlayerPOB();
+                table += gft.getPlayerPOB();
                 table += "</td>";
                 
                 table += "<td>";
-                table += germanyfootballteam.getPlayerPosition();
+                table += gft.getPlayerPosition();
                 table += "</td>";
                 
                 table += "<td>";
-                table += germanyfootballteam.getPlayerCaps();
+                table += gft.getPlayerCaps();
                 table += "</td>";
                 
                 table += "<td>";
-                table += germanyfootballteam.getPlayerGoals();
+                table += gft.getPlayerGoals();
                 table += "</td>";
                 
                 table += "<td>";
-                table += germanyfootballteam.getPlayerDomesticClub();
+                table += gft.getPlayerDomesticClub();
                 table += "</td>";
                 table += "</tr>";
             }

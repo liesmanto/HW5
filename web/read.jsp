@@ -19,6 +19,6 @@
         <h1><u>Germany Football Team Current Squad</u></h1>
         <%= table %>
         <br>
-        <a href="index.jsp">previous page</a>
+        <a href="add">Add A Player</a>
     </body>
 </html>
