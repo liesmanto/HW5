@@ -17,7 +17,7 @@
         <form name="addForm" action="addPlayer" method="get">
             
             <label>Jersey Number:</label>
-            <input type="tex" name="jNumber" value=""/>
+            <input type="tex" name="number" value=""/>
             <br>
             <label>Name:</label>
             <input type="tex" name="name" value=""/>
@@ -35,10 +35,10 @@
             <input type="tex" name="caps" value=""/>
             <br>
             <label># of Goals</label>
-            <input type="tex" name="name" value=""/>
+            <input type="tex" name="goals" value=""/>
             <br>
             <label>Domestic Club:</label>
-            <input type="tex" name="name" value=""/>
+            <input type="tex" name="club" value=""/>
             <br>
             <input type="submit" name="submit" value="Submit"/>
         </form>
