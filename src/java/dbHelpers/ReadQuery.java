@@ -69,6 +69,46 @@ public class ReadQuery {
         String table = "";
         table += "<table>";
         
+        table += "<tr>";
+
+            table += "<th>";
+            table += "ID"; 
+            table += "</th>";
+                
+            table += "<th>";
+            table += "Jersey #";
+            table += "</th>";
+                
+            table += "<th>";
+            table += "Name";
+            table += "</th>";
+                
+            table += "<th>";
+            table += "Age";
+            table += "</th>";
+                
+            table += "<th>";
+            table += "POB";
+            table += "</th>";
+                 
+            table += "<th>";
+            table += "Position";
+            table += "</th>";
+                
+            table += "<th>";
+            table += "Caps";
+            table += "</th>";
+                
+            table += "<th>";
+            table += "Goals";
+            table += "</th>";
+                
+            table += "<th>";
+            table += "Domestic Club";
+            table += "</th>";
+                
+        table += "</tr>";
+        
         try {
             while(this.results.next()) {
                 GermanyFootballTeam germanyfootballteam = new GermanyFootballTeam();
@@ -83,6 +123,7 @@ public class ReadQuery {
                 germanyfootballteam.setPlayerDomesticClub(this.results.getString("PlayerDomesticClub"));
                 
                 table += "<tr>";
+                
                 table += "<td>";
                 table += germanyfootballteam.getPlayerID();
                 table += "</td>";
