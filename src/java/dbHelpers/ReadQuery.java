@@ -106,7 +106,11 @@ public class ReadQuery {
             table += "<th>";
             table += "Domestic Club";
             table += "</th>";
-                
+            
+            table += "<th>";
+            table += " ";
+            table += "</th>";
+            
         table += "</tr>";
         
         try {

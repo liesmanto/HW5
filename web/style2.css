@@ -12,34 +12,41 @@ body {
         background-color: tan;
 }
 
-table, th, td {
-    border: 1px solid white;
-}
-
 
 table {
      border-collapse: collapse;
      width: 100%;
      padding: 15px;
-     border: 10px;
+     border: 10px solid white;
 }
 
 th, td {
-    font: silver;
     padding: 15px;
     text-align: left;
+    border: 1px solid white;
     border-bottom:2px solid #ccc;
 }
 
 th {
+    color: silver;
     height: 50%;
     text-align: left;
     vertical-align: bottom;
     background-color: #ffff99;
 }
 
-tr {
+tr:nth-child(even) {
+    color: white;
     background-color: coral;
+}
+
+tr:nth-child(odd) {
+    color: white;
+    background-color: coral;
+}
+
+tr:hover {
+    background-color: #f5f5f5;
 }
 
 a {
