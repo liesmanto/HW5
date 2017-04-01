@@ -54,7 +54,7 @@ public class AddQuery {
     
     public void doAdd(GermanyFootballTeam germanyfootballteam) {
         try {
-            String query = "INSEERT INTO GermanyFootballTeam (playerJerseyNumber, playerName, playerAge, playerPOB, playerPosition, playerCaps, playerGoals, playerDomesticClub) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+            String query = "INSERT INTO GermanyFootballTeam (playerJerseyNumber, playerName, playerAge, playerPOB, playerPosition, playerCaps, playerGoals, playerDomesticClub) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
             PreparedStatement ps = conn.prepareStatement(query);
             
             ps.setInt(1, germanyfootballteam.getPlayerJerseyNumber());
