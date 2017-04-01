@@ -16,31 +16,49 @@
         <h1>Add A Player</h1>
         
         <form name="addForm" action="addPlayer" method="get">
+            <table align="center">
+                <tbody>
+                    <tr>
+                        <td>Jersey Number:</td>
+                        <td><input type="tex" name="playerJerseyNumber" value=""/></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Name:</td>
+                        <td><input type="tex" name="playerName" value=""/></td>
+                    </tr>
             
-            <label>Jersey Number:</label>
-            <input type="tex" name="playerJerseyNumber" value=""/>
-            <br>
-            <label>Name:</label>
-            <input type="tex" name="playerName" value=""/>
-            <br>
-            <label>Age:</label>
-            <input type="tex" name="playerAge" value=""/>
-            <br>
-            <label>Player Place of Birth:</label>
-            <input type="tex" name="playerPOB" value=""/>
-            <br>
-            <label>Player Position:</label>
-            <input type="tex" name="playerPosition" value=""/>
-            <br>
-            <label># of Caps:</label>
-            <input type="tex" name="playerCaps" value=""/>
-            <br>
-            <label># of Goals</label>
-            <input type="tex" name="playerGoals" value=""/>
-            <br>
-            <label>Domestic Club:</label>
-            <input type="tex" name="playerDomesticClub" value=""/>
-            <br>
+                    <tr>
+                        <td>Age:</td>
+                        <td><input type="tex" name="playerAge" value=""/></td>
+                    </tr>
+            
+                    <tr>
+                        <td>Place of Birth:</td>
+                        <td><input type="tex" name="playerPOB" value=""/></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Position:</td>
+                        <td><input type="tex" name="playerPosition" value=""/></td>
+                    </tr>
+                    
+                    <tr>
+                        <td># of Caps:</td>
+                        <td><input type="tex" name="playerCaps" value=""/></td>
+                    </tr>
+                    
+                    <tr>
+                        <td># of Goals:</td>
+                        <td><input type="tex" name="playerGoals" value=""/></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Domestic Club:</td>
+                        <td><input type="tex" name="playerDomesticClub" value=""/></td>
+                    </tr>
+                </tbody>
+            </table>
             <input type="submit" name="submit" value="Submit"/>
         </form>
     </body>
